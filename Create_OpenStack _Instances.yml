@@ -1,6 +1,6 @@
 ---
 - name: Create OpenStack Instances
-  hosts: control
+  hosts: Control
  #connection: local
   gather_facts: false
   become: true 
