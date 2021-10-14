@@ -1,0 +1,11 @@
+---
+- name: Create OpenStack Instances
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: true 
+  collections:
+    - openstack.cloud
+  roles:
+    - osp_infra         #Deploy Openstack INFRA
+    - cloud_inventory   #Create In-Memory-Inventory 
