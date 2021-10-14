@@ -1,0 +1,7 @@
+---
+# tasks file for db_config
+- name: Setup Postgres for remote password auth
+  template:
+    src: pg_hba.conf.j2
+    dest: "{{ postgres_12_data_dir }}/pg_hba.conf"
+  notify: restart_postgres

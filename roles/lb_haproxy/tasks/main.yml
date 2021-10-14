@@ -1,0 +1,5 @@
+---
+# tasks file for lb_haproxy
+- import_tasks: install_lb_pkgs.yml 
+- import_tasks: lb_haproxy_config.yml
+- import_tasks: lb_haproxy_enable.yml

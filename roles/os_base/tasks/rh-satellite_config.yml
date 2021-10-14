@@ -1,0 +1,15 @@
+---
+# tasks file for os-base
+- name: install katello-ca-consumer package
+  yum:
+    name: "{{ satellite_url }}"
+    state: present
+    disable_gpg_check: true
+
+- name: register systems in Red Hat Satellite
+  redhat_subscription:
+    state: present
+    activationkey: "{{ satellite_activationkey }}"
+    org_id: "{{ satellite_org }}"
+    auto_attach: true
+

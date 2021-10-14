@@ -1,0 +1,46 @@
+---
+# vars file for osp_infra
+
+guid: "{{ lookup('ENV','GUID') }}"
+
+instances:
+  - name: app1
+    keypair: "{{ guid }}-keypair"
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: "{{ guid }}-HostSG"
+    internal_network: "{{ guid }}-dev-network"
+    metadata:
+      AnsibleGroup: flask_servers
+      deployment_name: dev
+
+  - name: app2
+    keypair: "{{ guid }}-keypair"
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group:  "{{ guid }}-HostSG"
+    internal_network:  "{{ guid }}-dev-network"
+    metadata:
+      AnsibleGroup: flask_servers
+      deployment_name: dev
+
+  - name: appdb1
+    keypair: "{{ guid }}-keypair"
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group:  "{{ guid }}-HostSG"
+    internal_network:  "{{ guid }}-dev-network"
+    metadata:
+      AnsibleGroup: db_servers
+      deployment_name: dev
+
+  - name: frontend1
+    keypair: "{{ guid }}-keypair"
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group:  "{{ guid }}-HostSG"
+    internal_network:  "{{ guid }}-dev-network"
+    metadata:
+      AnsibleGroup: lb_servers
+      deployment_name: dev
+

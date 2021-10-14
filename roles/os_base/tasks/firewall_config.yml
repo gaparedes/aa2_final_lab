@@ -1,0 +1,19 @@
+---
+# tasks file for os-base
+- name: Install Firewalld
+  yum:
+    name: firewalld
+    state: latest
+
+- name: Start Firewall
+  service:
+    name: firewalld
+    enabled: yes
+    state: started
+
+- name: Open service port
+  firewalld:
+    service: http
+    state: enabled
+    immediate: true
+    permanent: true

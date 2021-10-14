@@ -1,0 +1,7 @@
+---
+# tasks file for lb_haproxy
+- name: Enable Haproxy
+  service:
+    name: haproxy
+    state: started
+    enabled: true

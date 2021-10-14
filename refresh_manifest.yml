@@ -1,0 +1,10 @@
+---
+- name: Refresh Satellite's Manifest 
+  hosts: satellite.example.com
+  gather_facts: no
+  tasks: 
+    - name: Refresh Satellite manifest
+      ansible.builtin.command:
+        hammer subscription refresh-manifest --organization=prod
+
+

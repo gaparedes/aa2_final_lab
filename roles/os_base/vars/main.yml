@@ -1,0 +1,5 @@
+---
+# vars file for os-base
+satellite_activationkey:  gpte-labs-rhel8 
+satellite_org:  prod 
+satellite_url:  http://satellite.example.com/pub/katello-ca-consumer-latest.noarch.rpm 

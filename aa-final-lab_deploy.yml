@@ -1,0 +1,41 @@
+---
+- name: Create OpenStack Instances
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: true 
+  collections:
+    - openstack.cloud
+  roles:
+    - osp_infra         #Deploy Openstack INFRA
+    - cloud_inventory   #Create In-Memory-Inventory 
+
+#- import_playbook: refresh_manifest.yml
+
+- name: Servers subscription, DNS and Firwall Configuration
+  hosts: flask_servers, db_servers, lb_servers
+  become: true
+  roles:
+    - os_base
+
+- name: Postgres - Install and Configuration
+  hosts: db_servers
+  become: true
+  roles:
+    - db_config
+
+- name: Flask repo, Virtualenv - Configuration 
+  hosts: flask_servers
+  become: true
+  roles:
+    - flask_app
+
+- name: Load Balancer - Deploy and Configuration
+  hosts: lb_servers
+  become: true
+  roles:
+    - lb_haproxy
+
+
+- import_playbook: end2end-smoketest_postgres_db.yml
+- import_playbook: end2end-smoketest_check_websrvrs_response.yml

@@ -1,0 +1,6 @@
+---
+# tasks file for flask_app
+- name: Create Flask User
+  user:
+    name: "{{ flask_user }}"
+    state: present

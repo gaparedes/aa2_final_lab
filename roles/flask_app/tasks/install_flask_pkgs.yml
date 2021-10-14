@@ -1,0 +1,13 @@
+---
+# tasks file for flask_app
+- name: Install flask packages
+  package:
+    name: "{{ __package }}"
+    state: present
+  loop: "{{ app_yum_packages }}"
+  loop_control:
+    loop_var: __package
+  tags:
+    - application_servers
+    - flask
+

@@ -1,0 +1,7 @@
+---
+# tasks file for flask_app
+- import_tasks: create_flask_user.yml
+- import_tasks: install_flask_pkgs.yml
+- import_tasks: flask_repo_config.yml
+- import_tasks: virtualenv_setup.yml
+- import_tasks: flask-app_db_init.yml

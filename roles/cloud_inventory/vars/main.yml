@@ -1,0 +1,6 @@
+---
+# vars file for cloud_inventory
+guid: "{{ lookup('ENV','GUID') }}"
+home: "{{ lookup('ENV','HOME') }}"
+internal_domain: "example.com"
+

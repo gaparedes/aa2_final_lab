@@ -1,0 +1,7 @@
+---
+# tasks file for db_config
+- name: Setup Postgres as started and enabled on boot.
+  service:
+    name: "{{ postgres_service }}"
+    state: "{{ postgres_service_state | default('started') }}"
+    enabled: "{{ postgres_service_enabled | default(true) }}"

@@ -1,0 +1,8 @@
+---
+# tasks file for db_config
+- name: Setup Postgres to listen on network interfaces
+  lineinfile:
+    dest: "{{ postgres_12_data_dir }}/postgresql.conf"
+    line: "listen_addresses = '*'"
+    insertafter: "#listen_addresses"
+  notify: restart_postgres

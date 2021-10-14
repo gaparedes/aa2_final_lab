@@ -1,0 +1,7 @@
+---
+# tasks file for lb_haproxy
+- name: Install load balancer packages
+  package:
+    name: "{{ load_balancer_packages }}"
+    state: present
+

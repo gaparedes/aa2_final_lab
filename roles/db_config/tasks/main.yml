@@ -1,0 +1,8 @@
+---
+# tasks file for db_config
+- import_tasks: install_postgresql.yml
+- import_tasks: check_postgres_init.yml
+- import_tasks: set_remote_pass.yml
+- import_tasks: set_nics_listen.yml
+- import_tasks: set_postgres_boot.yml 
+- import_tasks: postgres_config_users-resc-db.yml
