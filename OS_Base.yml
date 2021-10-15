@@ -1,6 +1,6 @@
 ---
 - name: Servers subscription, DNS and Firwall Configuration
-  hosts:  app_servers, database_servers, load_servers
+  hosts:  app_servers, database_servers, load_balancers
   become: true
   roles:
     - os_base
