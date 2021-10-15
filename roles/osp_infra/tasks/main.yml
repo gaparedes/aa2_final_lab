@@ -1,8 +1,8 @@
 ---
 # tasks file for osp_infra
 - name: Create Instance
-  #openstack.cloud.server:
-  os_server:
+  openstack.cloud.server:
+  #os_server:
     cloud: "{{ guid }}-project"
     name: "{{ instance.name }}"
     image: "{{ instance.image }}"
