@@ -1,12 +1,12 @@
 ---
-- name: disable postgres module  
-  command: dnf -qy module disable postgresql
-
 - name: add custom repository
   yum:
     name: "{{ postgres_rhel8_repo }}"
     state: present
     disable_gpg_check: true
+    
+- name: disable postgres module  
+  command: dnf -qy module disable postgresql
     
 - name: Install Postgres packages
   package:
