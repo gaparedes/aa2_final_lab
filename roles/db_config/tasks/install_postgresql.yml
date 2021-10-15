@@ -1,5 +1,4 @@
 ---
-# tasks file for roles/db-server
 - name: disable postgres module  
   command: dnf -qy module disable postgresql
 
