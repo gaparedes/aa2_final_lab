@@ -17,8 +17,4 @@
   loop: "{{ instances }}"
   loop_control:
     loop_var: instance
-
-- name: Pause for 3 minutes to build INFRA
-  pause:
-    minutes: 3
-
+    
