@@ -1,6 +1,6 @@
 ---
 - name: disable postgres module  
-  command: dnf -qy module disable postgresql
+  command: dnf -qy module disable postgres
 
 - name: add custom repository
   yum:
