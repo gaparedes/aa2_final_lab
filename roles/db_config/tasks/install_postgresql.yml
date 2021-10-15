@@ -1,8 +1,7 @@
 ---
 # tasks file for db_config
 - name: Disable built-module RHEL8 for postgresql
-  ansible.builtin.shell:
-    cmd: dnf -qy module disable postgresql
+    command: dnf -qy module disable postgresql
 
 - name: add custom repository
   yum:
