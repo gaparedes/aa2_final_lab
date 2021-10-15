@@ -1,7 +1,4 @@
 ---
-- name: disable postgres module  
-  command: dnf -qy module disable postgres
-
 - name: add custom repository
   yum:
     name: "{{ postgres_rhel8_repo }}"
