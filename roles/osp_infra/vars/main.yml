@@ -11,7 +11,7 @@ instances:
     security_group: "{{ guid }}-HostSG"
     internal_network: "{{ guid }}-dev-network"
     metadata:
-      AnsibleGroup: app_servers
+      AnsibleGroup: flask_servers
       deployment_name: dev
 
   - name: app2
@@ -21,7 +21,7 @@ instances:
     security_group:  "{{ guid }}-HostSG"
     internal_network:  "{{ guid }}-dev-network"
     metadata:
-      AnsibleGroup: app_servers
+      AnsibleGroup: flask_servers
       deployment_name: dev
 
   - name: appdb1
@@ -31,7 +31,7 @@ instances:
     security_group:  "{{ guid }}-HostSG"
     internal_network:  "{{ guid }}-dev-network"
     metadata:
-      AnsibleGroup: database_servers
+      AnsibleGroup: db_servers
       deployment_name: dev
 
   - name: frontend1
@@ -41,6 +41,6 @@ instances:
     security_group:  "{{ guid }}-HostSG"
     internal_network:  "{{ guid }}-dev-network"
     metadata:
-      AnsibleGroup: load_balancers
+      AnsibleGroup:  lb_servers
       deployment_name: dev
 
