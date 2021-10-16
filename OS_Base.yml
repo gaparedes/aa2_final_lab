@@ -1,6 +1,7 @@
 ---
 - name: Servers subscription, DNS and Firwall Configuration
   hosts: flask_servers, db_servers, lb_servers
+  become: yes
   roles:
     - os_base
 
