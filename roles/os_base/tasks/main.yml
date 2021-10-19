@@ -1,5 +1,5 @@
 ---
 # tasks file for os-base
-#- import_tasks: network_config.yml
+- import_tasks: network_config.yml
 - import_tasks: rh-satellite_config.yml
 #- import_tasks: firewall_config.yml
