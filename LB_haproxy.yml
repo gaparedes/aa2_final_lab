@@ -1,0 +1,5 @@
+- name: Load Balancer - Deploy and Configuration
+  hosts: lb_servers
+  become: true
+  roles:
+    - lb_haproxy
