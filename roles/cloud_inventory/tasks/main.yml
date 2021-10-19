@@ -13,7 +13,7 @@
     ansible_host: "{{ instance.private_v4 }}"
     ssh_private_key_file: "{{ home }}/.ssh/{{ guid }}key.pem"
   #when: instance.metadata.AnsibleGroup == "osp_instances"
-  when: instance.metadata.AnsibleGroup == "{{ instance.metadata.AnsibleGroup }}"
+  when: instance.metadata.AnsibleGroup == "lb_servers" or instance.metadata.AnsibleGroup == "flask_servers" or instance.metadata.AnsibleGroup == "db_servers"
   loop: "{{ instances.openstack_servers }}"
   loop_control:
     loop_var: instance

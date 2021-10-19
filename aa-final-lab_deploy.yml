@@ -9,6 +9,7 @@
   roles:
     - osp_infra         #Deploy Openstack INFRA
     - cloud_inventory   #Create In-Memory-Inventory 
+    - host_update       #update /etc/hosts 
 
 #- import_playbook: refresh_manifest.yml
 

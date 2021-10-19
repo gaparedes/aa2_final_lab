@@ -1,6 +1,6 @@
 ---
 - name: Create OpenStack Instances
-  hosts: 192.168.50.231
+  hosts: control.example.com
   #connection: local
   gather_facts: false
   become: true 
