@@ -1,14 +1,4 @@
 ---
-- name: Create OpenStack Instances
-  hosts: localhost
-  connection: local
-  gather_facts: false
-  become: true 
-  collections:
-    - openstack.cloud
-  roles:
-    - cloud_inventory   #Create In-Memory-Inventory 
-
 - name: Servers subscription, DNS and Firwall Configuration
   hosts: flask_servers, db_servers, lb_servers
   become: true
