@@ -1,6 +1,6 @@
 ---
 - name: Postgres - Install and Configuration
-  hosts: database_servers
+  hosts: db_servers
   become: true
   roles:
     - db_config
