@@ -6,7 +6,7 @@
       - 'network'
   delegate_facts: true
   delegate_to: 192.168.50.201
-  connection: local
+  #connection: local
 
 - name: DNS IP updated
   lineinfile:
