@@ -2,6 +2,8 @@
 - name: Servers subscription, DNS and Firwall Configuration
   hosts: flask_servers, db_servers, lb_servers
   become: true
+  collections: 
+    - openstack.cloud
   roles:
     - os_base
 
