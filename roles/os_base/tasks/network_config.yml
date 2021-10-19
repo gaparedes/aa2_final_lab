@@ -4,9 +4,9 @@
   setup:
     gather_subset:
       - 'network'
-  delegate_facts: false
-  #delegate_to: 192.168.50.201
-  #connection: local
+  delegate_facts: true
+  delegate_to: localhost
+  connection: local
 
 - name: DNS IP updated
   lineinfile:
