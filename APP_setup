@@ -1,0 +1,5 @@
+- name: Flask repo, Virtualenv - Configuration 
+  hosts: flask_servers
+  become: true
+  roles:
+    - flask_app
